@@ -1,3 +1,3 @@
 # Lora Galoyan
 
-- https://loragaloyan.com
+- https://loragaloyan.com 
