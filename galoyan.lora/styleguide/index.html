@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS Styleguide</title>
+
+	<link rel="stylesheet" href="https://use.typekit.net/guv2awx.css">
+	<link rel="stylesheet" href="https://use.typekit.net/guv2awx.css">
+
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="stylesheet" href="../lib/css/styleguide.css">
+	<link rel="stylesheet" href="../lib/css/gridsystem.css">
+	<link rel="stylesheet" href="../css/storetheme.css">
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+
+	<header class="navbar">
+
+		<div class="container display-flex">
+			<div class="flex-none">
+				<h1>Styleguide</h1>
+			</div>
+			<div class="flex-stretch"></div>
+			<nav class="flex-none nav">
+				<ul class="container display-flex">
+					<li><a href="#tableofcontents">Table of Contents</a></li>
+					
+					
+				</ul>
+			</nav>
+		</div>
+	</header>
+	
+
+	<div class="container" id="tableofcontents">
+		<h2>TABLE OF CONTENTS</h2>
+		<div class="card">
+			<nav class="nav">
+				<ul>
+					<li><a href="#typography">Typography</a></li>
+					<ul>
+						<li><a href="#headings">Headings</a></li>
+						<li><a href="#paragraphs">Paragraphs</a></li>
+					</ul>
+					<li><a href="#cards">Cards</a></li>
+					<li><a href="#viewwindow">ViewWindow</a></li>
+					<li><a href="#navigations">Navigations</a></li>
+					<li><a href="#gridsystem">Grid System</a></li>
+					<li><a href="#flexsystem">Flex System</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+
+	<div class="container" id="typography">
+		<h2>TYPOGRAPHY</h2>
+		
+		<div class="card soft" id="headings">
+			<h3>Headings</h3>	
+			<h1>Heading 1</h1>
+			<h2>HEADING 2</h2>
+			<h3>Heading 3</h3>
+			<h4>Heading 4</h4>
+			<h5>Heading 5</h5>
+			<h6>Heading 6</h6>
+		</div>
+		
+		<div class="card soft" id="paragraphs">
+			<h3>PARAGRAPHS</h3>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis eum sint porro ipsum mollitia doloremque quod rem, asperiores numquam delectus laborum quisquam totam sed fugit quaerat nostrum dignissimos atque reprehenderit?</p>
+			<p>Earum ab in a minus accusamus exercitationem aut quam ex facere cupiditate non aperiam nemo culpa ducimus, reiciendis quisquam quaerat sapiente? Cupiditate quidem ex fugiat culpa, consequuntur fugit dolorum laboriosam.</p>
+			<p>Temporibus alias impedit accusamus minus exercitationem quaerat consequatur dolore corrupti laborum nobis optio explicabo ullam quas delectus id, distinctio ipsa. Itaque est magni ad esse delectus cupiditate autem fugiat sequi.</p>
+		</div>
+	</div>
+
+
+
+	<div class="container">
+		<h2>CARDS</h2>
+
+		<div class="grid gap">
+			<div class="col-ex-12 col-md-4">
+				<div class="card">Card</div>
+			</div>
+			<div class="col-ex-12 col-md-4">
+				<div class="card soft">Card Soft</div>
+			</div>
+			<div class="col-ex-12 col-md-4">
+				<div class="card hard">Card Hard</div>
+			</div>
+			<div class="col-ex-12 col-md-4">
+				<div class="card flat">Card Flat</div>
+			</div>
+			<div class="col-ex-12 col-md-4">
+				<div class="card dark">Card Dark</div>
+			</div>
+			<div class="col-ex-12 col-md-4">
+				<div class="card medium">Card Medium</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="container">
+		<h2>VIEW WINDOW</h2>
+	</div>
+
+
+
+
+	<div class="container" id="navigations">
+		<h2>NAVIGATIONS</h2>
+
+
+		<script>
+		const makeNav = (classes='') => {
+			const links = ['Home','Artist','Shop','Custom Orders','FAQ'];
+			let ran = Math.floor(Math.random()*links.length);
+			document.write(`
+			<div>
+				<nav class="${classes}">
+				<ul>
+				${links.reduce((r,o,i)=>{
+					return r+`<li class="${ran==i?'active':''}"><a href="#">${o}</a></li>`;
+				},'')}
+				</ul>
+			</nav>
+			</div>
+			`);
+		}
+		</script>
+
+
+		<div class="card soft">
+			<h3>BASIC NAV</h3>
+			<script>makeNav('nav')</script>
+		</div>
+
+		<div class="card soft">
+			<h3>FLEX NAV</h3>
+			<script>makeNav('nav nav-flex')</script>
+		</div>
+
+		<div class="card soft">
+			<h3>STRETCH NAV</h3>
+			<script>makeNav('nav nav-stretch')</script>
+		</div>
+
+
+		<div class="card soft">
+			<h3>PILLS NAV</h3>
+			<script>makeNav('nav nav-pills')</script>
+		</div>
+
+
+		<div class="card soft">
+			<h3>CRUMBS NAV</h3>
+			<script>makeNav('nav nav-crumbs')</script>
+		</div>
+
+
+		<div class="card soft">
+			<h3>MATERIAL NAV</h3>
+			<script>makeNav('nav nav-material')</script>
+		</div>
+
+
+		<script>
+			$("#navigations a").on("click",function(e){
+				e.preventDefault();
+				$(this).closest("li").addClass("active")
+					.siblings().removeClass("active")
+			})
+		</script>
+
+	</div>
+
+
+
+
+	<div class="container">
+		<h2>GRID SYSTEM</h2>
+	</div>
+
+
+
+
+	<div class="container">
+		<h2>FLEX SYSTEM</h2>
+	</div>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

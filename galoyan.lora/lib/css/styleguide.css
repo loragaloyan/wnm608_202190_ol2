@@ -1,0 +1,312 @@
+/* CSS RESET */ 
+
+*, *::after, *::before {
+	box-sizing:border-box;
+}
+
+:root {
+	--color-neutral-light:#eee;
+	--color-neutral-medium:#999;
+	--color-neutral-dark:#555;
+
+
+
+	--color-main-light:lightblue;
+	--color-main-medium:blue;
+	--color-main-dark:darkblue;
+
+	--color-black:#000;
+	--color-white:#fff;
+
+	--header-height:3rem;
+	--spacing:1rem;
+
+	--font-serif: Georgia, "Times New Roman", serif;
+	--font-sans: Helvetica, Arial, sans-serif;
+
+}
+
+
+body {
+	margin:0;
+	font-size:100%;
+	font-family:var(--font-sans);
+}
+
+h1 {
+	font-family: avalon, sans-serif;
+	font-weight: 500;
+	font-style: normal;
+}
+
+h2 {
+
+	font-family: futura-pt, sans-serif;
+	font-weight: 500;
+	font-style: normal;	
+	}
+
+h3 {
+	font-family: futura-pt, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	}
+
+h4 {
+	font-family: futura-pt, sans-serif;
+	font-weight: 300;
+	font-style: normal;
+	}
+
+h5 {
+	font-family: futura-pt, sans-serif;
+	font-weight: 200;
+	font-style: normal;	
+	}
+
+h6 {
+	font-family: futura-pt, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	}
+
+a {
+	color:inherit;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+a:hover {
+	text-decoration:underline;
+}
+
+
+
+
+
+/*  LAYOUT CLASSES */
+
+.container {
+	max-width:800px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+
+.display-flex { display:flex; }
+.display-inline-flex { display:inline-flex; }
+.display-block { display:block; }
+.display-inline-block { display:inline-block; }
+
+
+.flex-stretch { flex: 1 1 auto; }
+.flex-none { flex: none; }
+
+.flex-align-center { align-items:center; }
+.flex-justify-center { justify-content:center; }
+
+
+
+/* Small Classes */
+
+.media-image {
+	max-width: 100%;
+	vertical-align: text-bottom;
+}
+
+
+/* COMPONENT CLASS */
+
+.nav ul {
+	list-style-type:none;
+	margin-top:0;
+	margin-bottom:0;
+	padding-left:0;
+}
+
+	.nav a{
+		display: block;
+		padding: 0.2em 0.5em;
+	}
+
+	.nav a:hover {
+		background-color: #8E92EF;
+		color: var(--color-white);
+		text-decoration: none;	
+	}
+
+	.nav .active a {
+		background-color: #d7d7dd;
+		color: inherit;
+		text-decoration: none;	
+		
+	}
+
+
+.nav-material ul,
+.nav-crumbs ul,
+.nav-pills ul,
+.nav-stretch ul,
+.nav-flex ul {
+	display: flex;
+}
+
+.nav-crumbs a{
+	display:  inline-block;
+}
+
+
+.nav-crumbs .active a
+.nav-crumbs a:hover {
+	background-color: #8E92EF;
+	color: inherit;
+	text-decoration: underline;
+}
+
+.nav-crumbs li:not(:first-child)::before {
+	content: '/';
+}
+
+
+.nav-material li,
+.nav-stretch li {
+	flex: 1 1 auto;
+	text-align: center;
+}
+
+.nav-pills a{
+	border-radius: 2em;
+	padding: 0.5em 1em;
+}
+
+
+
+.nav-material a{
+	padding: 0.5em 1em;
+	position: relative;
+}
+
+.nav-material .active a{
+	background-color: transparent;
+	color: inherit;
+}
+
+
+.nav-material a:hover{
+	background-color: #d7d7dd;
+	color: inherit;
+}
+
+.nav-material a::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 0;
+	background-color: #220C3F;
+	transition:  all 0.3s;
+}
+
+
+.nav-material .active a::after {
+	height: 4px;
+}
+
+
+
+
+.navbar {
+	background-color: #220C3F;
+	color:var(--color-white);
+	line-height:var(--header-height);
+}
+
+.navbar h1 {
+	font-size: 3em;
+	margin:0;
+	font-family: avalon, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+}
+
+.navbar a {
+	padding:  0 0.5em;
+}
+
+
+
+/* CARD */
+
+.card {
+	background-color:var(--color-white);
+	margin-top: 1em;
+	margin-bottom: 1em;
+	padding: 1em;
+
+	overflow: hidden;
+	position: relative;
+}
+
+.card.soft {
+	border-radius: 0.5em;
+	box-shadow: 0 0 10px #220C3F;
+}
+
+.card.hard {
+		border-radius: 0.2em;
+		border: 2px solid #220C3F;
+	}
+
+
+.card.dark {
+	background-color: #220C3F;
+	color: var(--color-neutral-light);
+}
+
+.card.medium {
+	background-color:#8E92EF;
+	color: var(--color-neutral-light);
+}
+
+.card.flat {
+	padding: 0;
+}
+
+
+
+.view-window {
+	height: 50vh;
+	position: relative;
+	overflow: hidden;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
