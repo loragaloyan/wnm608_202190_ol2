@@ -304,8 +304,8 @@ a:hover {
 	padding: 0.2em 0.5em;
 }
 
-.table.striped tbody tr:nth-child(odd) {
-	background-color: var(--color-neutral-light);
+.table.striped {
+	background-color: purple;
 }
 
 
@@ -335,9 +335,11 @@ a:hover {
 
 /* FIGURE */
 
+
 .figure{
 	margin: 0;
 }
+
 
 .figure img {
 	width: 100%;
@@ -492,9 +494,72 @@ a:hover {
 
 .toggle input:checked + label::after {
 	transform: translateX(1em);
-	
-
 }
+
+
+
+.figure.product {
+	padding: 10px;
+	border-radius: 0.1em;
+	box-shadow:0 2px 5px #220C3F;
+	overflow: hidden;
+}
+
+
+.product-overlay {
+	position: relative;
+}
+
+
+.product-overlay:hover figcaption {
+	opacity: 0;
+} 
+
+.product-overlay figcaption {
+	padding: 5px;
+	color: white;
+	position: absolute;
+	top: 0;
+	left: 0px;
+	width: 100%;
+	height:  100%;
+	background-color: rgba(0,0,0,0.7);
+	transition: all 0.3s;
+	display: flex;
+}
+
+
+/*.product-overlay .caption-body {
+	background-color: white;
+	border-radius: 0.5em;
+	padding: 1em;
+	transform: translateY(2em);
+	transition: all 0.3s;
+}
+
+
+.product-overlay:hover .caption-body {
+	transform: translateY(0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
