@@ -45,7 +45,7 @@ body {
 }
 
 .title {
-
+	height: 250px;
 }
 
 
@@ -121,8 +121,23 @@ a:hover {
 	margin-left: auto;
 }
 
+.center {
+	margin: 0 auto;
+}
+.text-center {
+	text-align: center;
+}
+.inline-block {
+	display: inline-block;
+}
+.flex-center-center {
+	display: flex;
+	align-items: center;
+  	justify-content: center;
+}
 
-/*.display-flex { display:flex; }*/
+.flexbox { display: flex; }
+.display-flex { display:flex; }
 .display-inline-flex { display:inline-flex; }
 .display-block { display:block; }
 .display-inline-block { display:inline-block; }
@@ -349,7 +364,7 @@ a:hover {
 
 
 .view-window {
-	height: 90vh;
+	height: 300px;
 	position: relative;
 	overflow: hidden;
 	background-size: cover;

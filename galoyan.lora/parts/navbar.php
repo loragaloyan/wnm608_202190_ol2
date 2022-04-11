@@ -17,19 +17,19 @@
 
 <body>
 	<header class="navbar">
-		<div class="view-window" style="background-image:url('img/butterflygrey.jpg')">
-		<div class="title">
-			<h1>Azure Terrariums</h1>
-		</div>
+		<div class="view-window" style="background-image:url('img/butterflygrey2.jpg')">
 		<div class="menubar">
 			<div class="flex-stretch"></div>
-			<nav class="flex-none nav">
-				<ul class="menu">
-					<li><a href="index.php">HOME</a></li>
-					<li><a href="shop.php">SHOP</a></li>
-					<li><a href="artist.php">ARTIST</a></li>
-				</ul>
-			</nav>
+			<div class="">
+				<div class="flexbox">
+					<div class="flex-stretch"><a href="index.php">HOME</a></div>
+					<div class="flex-stretch"><a href="shop.php">SHOP</a></div>
+					<div class="flex-stretch"><a href="artist.php">ARTIST</a></div>
+				</div>
+			</div>
+		</div>
+		<div class="title flex-center-center">
+			<h1 class="">Azure Terrariums</h1>
 		</div>
 	</header>
 

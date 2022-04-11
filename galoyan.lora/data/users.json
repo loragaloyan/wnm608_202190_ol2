@@ -1,0 +1,20 @@
+[
+	{
+		"name":"Lora Galoyan",
+		"type":"Teacher",
+		"email":"lgaloyan1@art.edu",
+		"classes":[608,617]
+	},
+	{
+		"name":"Lora Galoyan",
+		"type":"dancer",
+		"email":"lgaloyan2@art.edu",
+		"classes":[608,617]
+	},
+	{
+		"name":"Lora Galoyan",
+		"type":"singer",
+		"email":"lgaloyan3@art.edu",
+		"classes":[608,617]
+	}
+]

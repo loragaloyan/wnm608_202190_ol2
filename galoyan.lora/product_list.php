@@ -5,12 +5,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Product List</title>
 
-	<?php include "parts/meta.php"; ?>
+	
+	<?php include "parts/navbar.php"; ?>
 
 </head>
 <body>
 	
-	<?php include "parts/navbar.php"; ?>
 
 	<div class="container">
 		<div class="card soft">
