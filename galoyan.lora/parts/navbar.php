@@ -6,9 +6,9 @@
 
 	<meta name="viewport" content="width=device-width">
 
-	<link rel="stylesheet" href="lib/css/styleguide.css">
-	<link rel="stylesheet" href="lib/css/gridsystem.css">
-	<link rel="stylesheet" href="css/storetheme.css">
+	<link rel="stylesheet" href="/aau/wnm608_202190_ol2/galoyan.lora/lib/css/styleguide.css">
+	<link rel="stylesheet" href="/aau/wnm608_202190_ol2/galoyan.lora/lib/css/gridsystem.css">
+	<link rel="stylesheet" href="/aau/wnm608_202190_ol2/galoyan.lora/css/storetheme.css">
 	<link rel="stylesheet" href="https://use.typekit.net/guv2awx.css">
 
  </head>
@@ -17,7 +17,7 @@
 
 <body>
 	<header class="navbar">
-		<div class="view-window" style="background-image:url('img/butterflygrey2.jpg')">
+		<div class="view-window" style="background-image:url('/aau/wnm608_202190_ol2/galoyan.lora/img/butterflygrey2.jpg')">
 		<div class="menubar">
 			<div class="flex-stretch"></div>
 			<div class="">
