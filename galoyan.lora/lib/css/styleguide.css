@@ -149,6 +149,8 @@ a:hover {
 .flex-align-center { align-items:center; }
 .flex-justify-center { justify-content:center; }
 
+.flex-column { flex-direction: column; }
+
 
 
 /* Small Classes */
@@ -359,6 +361,15 @@ a:hover {
 
 .card.flat {
 	padding: 0;
+}
+
+.card-section~.card-section{
+	border-top: 1px solid var(--color-neutral-light);
+
+}
+
+.card-section {
+	padding: 1em;
 }
 
 
@@ -585,6 +596,7 @@ a:hover {
 	border-radius: 0.1em;
 	box-shadow:0 2px 5px #220C3F;
 	overflow: hidden;
+	hidden: 100%;
 }
 
 
@@ -611,6 +623,20 @@ a:hover {
 }
 
 
+
+.images-main img{
+	width: 100%;
+	height: 40vh;
+	object-fit: contain;
+}
+
+.images-thumbs img {
+	width: 8em;
+	height: 6em;
+	object-fit: contain;
+}
+
+
 /*.product-overlay .caption-body {
 	background-color: white;
 	border-radius: 0.5em;
@@ -623,6 +649,8 @@ a:hover {
 .product-overlay:hover .caption-body {
 	transform: translateY(0);
 }
+
+
 
 
 

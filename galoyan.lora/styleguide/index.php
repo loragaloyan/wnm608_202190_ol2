@@ -11,6 +11,7 @@
 
 	<link rel="stylesheet" href="../lib/css/styleguide.css">
 
+	<?php include "parts/meta.php"; ?>
 	<?php include "parts/navbar.php"; ?>
 
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>

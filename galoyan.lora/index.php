@@ -10,6 +10,7 @@
 
 	<link rel="stylesheet" href="lib/css/styleguide.css">
 
+	<?php include "parts/meta.php"; ?>
 	<?php include "parts/navbar.php"; ?>
 </head>
 

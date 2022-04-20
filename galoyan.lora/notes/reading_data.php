@@ -18,11 +18,10 @@ $users_array = file_get_json("../data/users.json");
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Reading Data</title>
 
-	<?php include "./parts/meta.php"; ?>
-
 </head>
 <body>
 	
+	<?php include "parts/meta.php"; ?>
 	<?php include "./parts/navbar.php"; ?>
 
 	<div class="container">
