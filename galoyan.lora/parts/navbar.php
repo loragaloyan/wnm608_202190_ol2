@@ -1,3 +1,9 @@
+<?php
+
+include_once "lib/php/functions.php";
+
+?>
+
 
 <head>
 	<meta charset="UTF-8">
@@ -24,7 +30,12 @@
 				<div class="flexbox">
 					<div class="flex-stretch"><a href="index.php">HOME</a></div>
 					<div class="flex-stretch"><a href="product_list.php">PRODUCTS</a></div>
-					<div class="flex-stretch"><a href="product_cart.php">CART</a></div>
+					<div class="flex-stretch"><a href="product_cart.php">
+
+					<span>CART</span>
+					<span class="badge"><?= makeCartBadge(); ?></span>
+
+					</a></div>
 					<!-- <div class="flex-stretch"><a href="shop.php">SHOP</a></div> -->
 					<div class="flex-stretch"><a href="artist.php">ARTIST</a></div>
 				</div>
