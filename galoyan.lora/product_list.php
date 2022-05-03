@@ -13,6 +13,11 @@ include_once "parts/templates.php";
 	<?php include "parts/meta.php"; ?>
 	<?php include "parts/navbar.php"; ?>
 
+	<script src="lib/js/functions.js"></script>
+	<script src="js/templates.js"></script>
+	<script src="js/product_list.js"></script>
+	
+
 </head>
 <body>
 	
@@ -20,25 +25,44 @@ include_once "parts/templates.php";
 	<div class="container">
 		<div class="card soft">
 			<h2>Product List</h2>
-			<!-- <ul>
-				<li><a href="product_item.php?id=1">Product One</a></li>
-				<li><a href="product_item.php?id=2">Product Two</a></li>
-				<li><a href="product_item.php?id=3">Product Three</a></li>
-				<li><a href="product_item.php?id=4">Product Four</a></li>
-			</ul> -->
+			
+			<div class="form-control">
+				<form class="hotdog light" id="product-search">
+					<input type="search" placeholder="Search Products">
+				</form>
+			</div>
 
-			<?php
-			$result = makeQuery(makeConn(), "
-				SELECT *
-				FROM `products`
-				ORDER BY `price`
-				-- LIMIT 5
-			");
-			// print_p($result);
-			echo "<div class='productlist grid gap'>", array_reduce($result,'productListTemplate'), "</div>";
-			?>
+			<div class="display-flex">
+			<div class="display-flex">
+				<div class="flex-stretch display-flex">
+							<div class="flex-none">
+								<button data-filter="category" data-value="" type="button" class="form-button">All</button>
+							</div>
+							<div class="flex-none">
+								<button data-filter="category" data-value="Fantasy" type="button" class="form-button">Fantasy</button>
+							</div>
+							<div class="flex-none">
+								<button data-filter="category" data-value="Landscape" type="button" class="form-button">Landscape</button>
+							</div>
+							<div class="flex-none">
+								<button data-filter="category" data-value="Floral" type="button" class="form-button">Floral</button>
+							</div>
+					</div>
+						<div class="flex-none">
+							<div class="form-select">
+								<select class="js-sort">
+									<option value="1">Least Expensive</option>
+									<option value="2">Most Expensive</option>
+								</select>
+							</div>
+						</div>
+						</div>
+					</div>
+			</div>
+			
 
-		</div>
+
+			<div class='productlist grid gap'></div>
 	</div>
 	
 
