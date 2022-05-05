@@ -54,7 +54,6 @@ $empty_product = (object) [
 				} else {
 			?>
 				<h2>Product List</h2>
-				<div class="card soft">
 			<?php
 				$result = makeQuery(makeConn(),"SELECT * FROM `products`");
 				echo array_reduce($result,'productListItem');
@@ -63,7 +62,6 @@ $empty_product = (object) [
 				// });
 				}
 			?>
-				</div>
 		</div>
 	</body>
 </html>
