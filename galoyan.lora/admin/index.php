@@ -9,7 +9,50 @@ $empty_product = (object) [
 	"thumbnail"=>"",
 	"description"=>"",
 	"images"=>"",
-]
+];
+
+//Logic
+try {
+	$conn = makePDOConn();
+	// switch($_GET['action']) {
+	// 	case "update":
+	// 	$statement = $conn->prepare("UPDATE
+	// 		`products`
+	// 		SET
+	// 			`name`=?,
+	// 			`price`=?,
+	// 			`quantity`=?,
+	// 			`category`=?,
+	// 			`description`=?,
+	// 			`thumbnail`=?,
+	// 			`images`=?,
+	// 			`date_modify`=NOW()
+	// 		WHERE `id`=?
+	// 		");
+	// 		$statement->execute([
+	// 			$_POST['product-name'],
+	// 			$_POST['product-price'],
+	// 			$_POST['product-quantity'],
+	// 			$_POST['product-category'],
+	// 			$_POST['product-description'],
+	// 			$_POST['product-thumbnail'],
+	// 			$_POST['product-images'],
+	// 			$_GET['id']
+	// 		]);
+
+	// 		header("location:{$_SERVER['PHP_SELF']}?id={$_GET['id']}");
+	// 		break;
+	// 	case "create":
+	// 		header("location:{$_SERVER['PHP_SELF']}?id=$id");
+	// 		break;
+	// 	case "delete":
+	// 		header("location:{$_SERVER['PHP_SELF']}");
+	// 		break;
+	// }
+} catch(PDOException $e) {
+	die($e->getMessage());
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -1,6 +1,4 @@
 <?php 
-
-
 session_start();
 
 function print_p($v) {
@@ -24,6 +22,15 @@ function makeConn(){
 	return $conn;
 }
 
+function makePDOConn(){
+	try {
+		$conn = new PDO(...PDOAuth());
+	} catch(PDOException $e) {
+		die($e->getMessage());
+	}
+	return $conn;
+}
+
 function makeQuery($conn,$qry){
 	$result = $conn->query($qry);
 	if($conn->errno) die($conn->error);
@@ -35,10 +42,7 @@ function makeQuery($conn,$qry){
 	return $a;
 }
 
-
 /* cart functions */
-
-
 
 function array_find($array,$fn){
 	foreach($array as $o) if ($fn($o)) return $o;
@@ -97,28 +101,3 @@ function getCartItems() {
 		return $o;
 	},$data);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

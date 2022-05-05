@@ -34,6 +34,10 @@ function showProductPage($o) {
 			<span>$o->price</span>
 		</div>
 		<div class="form-control">
+			<label class="form-label">Quantity</label>
+			<span>$o->quantity</span>
+		</div>
+		<div class="form-control">
 			<label class="form-label">Description</label>
 			<span>$o->description</span>
 		</div>
@@ -52,24 +56,27 @@ function showProductPage($o) {
 	<form method="post" action="{$_SERVER['PHP_SELF']}?id=$id&action=$createorupdate">
 		<h2>$addoredit Product</h2>
 		<div class="form-control">
-			<label class="form-label" for="user-title">Name</label>
-			<input class="form-input" name="user-title" id="user-title" type="text" value="$o->name" placeholder="Enter the product name">
+			<label class="form-label" for="product-title">Name</label>
+			<input class="form-input" name="product-title" id="product-title" type="text" value="$o->name" placeholder="Enter the product name">
 		</div>
 		<div class="form-control">
-			<label class="form-label" for="user-type">Price</label>
-			<input class="form-input" name="user-type" id="user-type" type="number" min="0" max="1000" step="0.01" value="$o->price" placeholder="Enter the product price">
+			<label class="form-label" for="product-type">Price</label>
+			<input class="form-input" name="product-type" id="product-type" type="number" min="0" max="1000" step="0.01" value="$o->price" placeholder="Enter the product price">
+		<div class="form-control">
+			<label class="form-label" for="product-quantity">Quantity</label>
+			<input class="form-input" name="product-quantity" id="product-quantity" type="number" min="0" max="1000" step="1" value="$o->quantity" placeholder="Enter the product quantity">
 		</div>
 		<div class="form-control">
-			<label class="form-label" for="user-email">Description</label>
-			<textarea class="form-input" name="user-email" id="user-description" placeholder="Enter the product description">$o->description</textarea>
+			<label class="form-label" for="product-email">Description</label>
+			<textarea class="form-input" name="product-email" id="product-description" placeholder="Enter the product description">$o->description</textarea>
 		</div>
 		<div class="form-control">
-			<label class="form-label" for="user-thumbnail">Image</label>
-			<input class="form-input" name="user-thumbnail" id="user-thumbnail" type="text" value="$o->thumbnail" placeholder="Enter the product image">
+			<label class="form-label" for="product-thumbnail">Image</label>
+			<input class="form-input" name="product-thumbnail" id="product-thumbnail" type="text" value="$o->thumbnail" placeholder="Enter the product image">
 		</div>
 		<div class="form-control">
-			<label class="form-label" for="user-images">Images</label>
-			<input class="form-input" name="user-images" id="user-images" type="text" value="$o->images" placeholder="Enter the product images, comma separated">
+			<label class="form-label" for="product-images">Images</label>
+			<input class="form-input" name="product-images" id="product-images" type="text" value="$o->images" placeholder="Enter the product images, comma separated">
 		</div>
 		<div class="form-control">
 			<input class="form-button" type="submit" value="Save Changes">
