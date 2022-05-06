@@ -13,7 +13,7 @@ function productListItem($r, $o) {
 	HTML;
 }
 
-function showProductPage($o) {
+function showProductPage($o, $id) {
 	// return <<<HTML
 	// 	<div>$o->name</div>
 	// 	<div>$o->price</div>
@@ -24,6 +24,7 @@ function showProductPage($o) {
 	$image_elements = array_reduce($images,function($r1,$o1) {
    		return $r1."<img height='100' width='100' src='$o1'>";
    	});
+   	// echo ("post info " . $createorupdate . " " . $id . " " . $_SERVER['PHP_SELF']);
 
 	//heredoc
 	$display = <<<HTML
@@ -56,19 +57,19 @@ function showProductPage($o) {
 	<form method="post" action="{$_SERVER['PHP_SELF']}?id=$id&action=$createorupdate">
 		<h2>$addoredit Product</h2>
 		<div class="form-control">
-			<label class="form-label" for="product-title">Name</label>
-			<input class="form-input" name="product-title" id="product-title" type="text" value="$o->name" placeholder="Enter the product name">
+			<label class="form-label" for="product-name">Name</label>
+			<input class="form-input" name="product-name" id="product-name" type="text" value="$o->name" placeholder="Enter the product name">
 		</div>
 		<div class="form-control">
-			<label class="form-label" for="product-type">Price</label>
-			<input class="form-input" name="product-type" id="product-type" type="number" min="0" max="1000" step="0.01" value="$o->price" placeholder="Enter the product price">
+			<label class="form-label" for="product-price">Price</label>
+			<input class="form-input" name="product-price" id="product-price" type="number" min="0" max="1000" step="0.01" value="$o->price" placeholder="Enter the product price">
 		<div class="form-control">
 			<label class="form-label" for="product-quantity">Quantity</label>
 			<input class="form-input" name="product-quantity" id="product-quantity" type="number" min="0" max="1000" step="1" value="$o->quantity" placeholder="Enter the product quantity">
 		</div>
 		<div class="form-control">
-			<label class="form-label" for="product-email">Description</label>
-			<textarea class="form-input" name="product-email" id="product-description" placeholder="Enter the product description">$o->description</textarea>
+			<label class="form-label" for="product-description">Description</label>
+			<textarea class="form-input" name="product-description" id="product-description" placeholder="Enter the product description">$o->description</textarea>
 		</div>
 		<div class="form-control">
 			<label class="form-label" for="product-thumbnail">Image</label>
