@@ -79,8 +79,21 @@ function cartTotals() {
 						<div class="flex-stretch"><strong>Total</strong></div>
 						<div class="flex-none">&dollar;$taxedfixed</div>
 					</div>
-					<div class="card-section">
-						<a href="product_checkout.php" class="form-button">Checkout</a>
-					</div>
+					
 	HTML;
 }
+
+
+
+function recommendedProducts($a){
+$products = array_reduce($a,'productListTemplate');
+echo <<<HTML
+<div class="grid gap productlist">$products</div>
+HTML;
+}
+
+
+
+
+
+

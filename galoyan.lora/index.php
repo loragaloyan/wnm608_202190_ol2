@@ -1,6 +1,7 @@
 <?php
 
 include_once "lib/php/functions.php";
+include_once "parts/templates.php";
 
 ?>
 
@@ -46,7 +47,17 @@ include_once "lib/php/functions.php";
 				<img src='img/t9.jpg' class="item-image">
 			</div>
 		</div>
+
+	<h3>Recommended Products</h3>
+	<?php
+	$result = makeQuery(makeConn(), "SELECT * FROM `products` WHERE `category`='Fantasy' ORDER BY `date_create` DESC LIMIT 3");
+	recommendedProducts($result)
+	?>
+	
 	</div>
+
+
+</div>
 
 
 </body>
