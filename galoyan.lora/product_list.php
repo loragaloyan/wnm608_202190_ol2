@@ -32,7 +32,7 @@ include_once "parts/templates.php";
 				</form>
 			</div>
 
-			<div class="display-flex">
+			<div class="display-flex flex-wrap">
 			<div class="display-flex">
 				<div class="flex-stretch display-flex">
 							<div class="flex-none">

@@ -145,6 +145,7 @@ a:hover {
 
 .flex-stretch { flex: 1 1 auto; }
 .flex-none { flex: none; }
+.flex-wrap { flex-wrap:wrap;  }
 
 .flex-align-center { align-items:center; }
 .flex-justify-center { justify-content:center; }
