@@ -14,3 +14,4 @@ Hello
 - http://loragaloyan.com/aau/wnm608_202190_ol2/galoyan.lora/admin/users.php
 - http://loragaloyan.com/aau/wnm608_202190_ol2/galoyan.lora/notes
 - http://loragaloyan.com/aau/wnm608_202190_ol2/galoyan.lora/reading_data.php
+- http://loragaloyan.com/aau/wnm608_202190_ol2/galoyan.lora/product_list.php
